@@ -1,0 +1,9 @@
+<%- include("partials/header") -%>
+<h1><%= heading%></h1>
+<p><%= content%></p>
+
+<% for (let index=0; index < posts.length ; index++ ) { %>
+    <h1><%= posts[index].postTitle%></h1>
+<p><%= posts[index].postBody.substring(0,101)%>....<a href="\posts\<%= posts[index].postTitle%>">Read More</a></p> 
+<% } %>
+<%- include("partials/footer") -%>   
